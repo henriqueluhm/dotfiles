@@ -11,6 +11,10 @@ alias nv="nvim"
 alias zs="nvim ~/.zshrc"
 alias src="source ~/.zshrc"
 
+function aliases() {
+  grep -E '^\s*alias\s+' ~/.zshrc
+}
+
 function cmt() { 
   git commit -m "$@"
 }
