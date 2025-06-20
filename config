@@ -1,0 +1,16 @@
+# This is the configuration file for Ghostty.
+#
+# Run `ghostty +show-config --default --docs` to view a list of
+# all available config options and their default values.
+#
+# Additionally, each config option is also explained in detail
+# on Ghostty's website, at https://ghostty.org/docs/config.
+
+background-opacity=0.75
+font-size=20
+fullscreen=true
+gtk-titlebar=false
+background-blur=true
+theme="Red Planet"
+keybind = f11=toggle_fullscreen
+
