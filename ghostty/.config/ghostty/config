@@ -7,10 +7,10 @@
 # on Ghostty's website, at https://ghostty.org/docs/config.
 
 background-opacity=0.75
-font-size=20
+font-size=16
 fullscreen=true
 gtk-titlebar=false
 background-blur=true
-theme="Red Planet"
+theme="grayscale"
 keybind = f11=toggle_fullscreen
 

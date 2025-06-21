@@ -1,6 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="henzilla"
+ZSH_THEME="henzilla-grayscale"
 
 plugins=(git zsh-vi-mode web-search copypath)
 
