@@ -11,6 +11,7 @@ alias nv="nvim"
 alias zs="nvim ~/.zshrc"
 alias src="source ~/.zshrc"
 alias lg="lazygit"
+alias df="cd ~/dotfiles && nv"
 
 function aliases() {
   grep -E '^\s*alias\s+' ~/.zshrc
