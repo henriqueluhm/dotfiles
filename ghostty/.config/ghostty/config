@@ -14,7 +14,7 @@ font-family-bold-italic="Ubuntu Mono Bold Italic"
 font-size=16
 fullscreen=true
 gtk-titlebar=false
-git-wide-tabs=false
+gtk-wide-tabs=false
 background-blur=true
 theme="grayscale"
 keybind = f11=toggle_fullscreen
