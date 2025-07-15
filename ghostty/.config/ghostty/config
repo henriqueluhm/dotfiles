@@ -6,16 +6,10 @@
 # Additionally, each config option is also explained in detail
 # on Ghostty's website, at https://ghostty.org/docs/config.
 
-background-opacity=0.75
-font-family="Ubuntu Mono Regular"
-font-family-bold="Ubuntu Mono Bold"
-font-family-italic="Ubuntu Mono Italic"
-font-family-bold-italic="Ubuntu Mono Bold Italic"
+background-opacity=0.7
 font-size=16
 fullscreen=true
 gtk-titlebar=false
-gtk-wide-tabs=false
-background-blur=true
 theme="grayscale"
 keybind = f11=toggle_fullscreen
 
