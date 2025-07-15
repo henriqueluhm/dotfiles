@@ -2,6 +2,8 @@ return {
 	{ "rebelot/kanagawa.nvim" },
 	{ "dzfrias/noir.nvim" },
 	{ "pgdouyon/vim-yin-yang" },
+	{ "morhetz/gruvbox" },
+	{ "e-ink-colorscheme/e-ink.nvim" },
 	{
 		"LazyVim/LazyVim",
 		opts = {
@@ -18,7 +20,7 @@ return {
 		"pgdouyon/vim-yin-yang",
 		config = function()
 			vim.api.nvim_create_autocmd("ColorScheme", {
-				pattern = "yin", -- or "*" for all themes
+				pattern = "*", -- or "*" for all themes
 				callback = function()
 					local hl = vim.api.nvim_set_hl
 
