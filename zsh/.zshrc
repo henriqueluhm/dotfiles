@@ -12,6 +12,15 @@ alias zs="nvim ~/.zshrc"
 alias src="source ~/.zshrc"
 alias lg="lazygit"
 alias df="cd ~/dotfiles && nv"
+alias run="cd ~/Documents/Coding/cis/frontend && pnpm dev"
+alias deploy="cd ~/Documents/Coding/cis && pnpm tf:deploy henrique ces"
+alias cis="cd ~/Documents/Coding/cis"
+alias dia="cd ~/Documents/Coding/dia"
+alias diaf="cd ~/Documents/Coding/dia/frontend"
+alias rund="cd ~/Documents/Coding/dia/frontend && pnpm dev"
+alias back="cd ~/Documents/Coding/cis/backend"
+alias front="cd ~/Documents/Coding/cis/frontend"
+alias keychron="echo 0 | sudo tee /sys/module/hid_apple/parameters/fnmode"
 
 function aliases() {
   grep -E '^\s*alias\s+' ~/.zshrc
@@ -71,3 +80,5 @@ xset r rate 220 30
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
