@@ -21,6 +21,7 @@ alias rund="cd ~/Documents/Coding/dia/frontend && pnpm dev"
 alias back="cd ~/Documents/Coding/cis/backend"
 alias front="cd ~/Documents/Coding/cis/frontend"
 alias keychron="echo 0 | sudo tee /sys/module/hid_apple/parameters/fnmode"
+alias zk="cd ~/Documents/zettelkasten && nv"
 
 function aliases() {
   grep -E '^\s*alias\s+' ~/.zshrc
