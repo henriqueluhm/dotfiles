@@ -2,7 +2,7 @@ return {
 	{ "rebelot/kanagawa.nvim" },
 	{ "dzfrias/noir.nvim" },
 	{ "pgdouyon/vim-yin-yang" },
-	{ "morhetz/gruvbox" },
+	{ "ellisonleao/gruvbox.nvim" },
 	{ "e-ink-colorscheme/e-ink.nvim" },
 	{
 		"LazyVim/LazyVim",
@@ -14,6 +14,14 @@ return {
 				floats = "transparent",
 			},
 		},
+	},
+
+	{
+		"gruvbox.nvim",
+		priority = 1000,
+		config = function()
+			vim.o.background = "dark"
+		end,
 	},
 
 	{
