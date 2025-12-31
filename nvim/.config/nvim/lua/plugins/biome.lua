@@ -1,14 +1,36 @@
 return {
-	-- Use Biome instead of prettier / eslint
+	-- Disable other formatters / linters
 	{
 		"stevearc/conform.nvim",
-		enable = false,
+		enabled = false,
 	},
+
+	-- Ensure biome is installed
 	{
-		"mason-org/mason.nvim",
+		"mason.nvim",
 		opts = {
 			ensure_installed = {
 				"biome",
+			},
+		},
+	},
+
+	-- Configure Biome LSP
+	{
+		"neovim/nvim-lspconfig",
+		opts = {
+			servers = {
+				biome = {
+					-- filetypes Biome should handle
+					filetypes = {
+						"javascript",
+						"javascriptreact",
+						"typescript",
+						"typescriptreact",
+						"json",
+						"jsonc",
+					},
+				},
 			},
 		},
 	},
