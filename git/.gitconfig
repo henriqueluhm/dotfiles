@@ -1,8 +1,5 @@
 [user]
 	name = Henrique Luhm
 	email = 62779084+henriqueluhm@users.noreply.github.com
-[credential]
-	helper = !aws codecommit credential-helper $@
-	UseHttpPath = true
 [pull]
 	rebase = false
