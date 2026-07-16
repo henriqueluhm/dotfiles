@@ -1,10 +1,1 @@
--- debug notifications:
--- os.execute(
--- 	"notify-send 'Window info' 'App: "
--- 		.. get_application_name()
--- 		.. "\nClass: "
--- 		.. get_class_instance_name()
--- 		.. "\nTitle: "
--- 		.. get_window_name()
--- 		.. "'"
--- )
+debug_print("App: " .. get_application_name() .. " Class: " .. get_class_instance_name())
