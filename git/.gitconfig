@@ -3,3 +3,5 @@
 	email = 62779084+henriqueluhm@users.noreply.github.com
 [pull]
 	rebase = false
+[credential]
+	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
