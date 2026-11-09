@@ -11,7 +11,7 @@ dotfiles/
 ├── git/          → ~/.gitconfig
 ├── kitty/        → ~/.config/kitty/
 ├── nvim/         → ~/.config/nvim/
-├── tmux/         → ~/.tmux.conf
+├── tmux/         → ~/.tmux.conf, ~/.local/bin/claude-tmux-*
 └── zsh/          → ~/.zshrc
 ```
 
@@ -36,6 +36,18 @@ Window rules live in `devilspie2/.config/devilspie2/*.lua`. Use `debug.lua` to i
 killall devilspie2
 devilspie2 --debug
 ```
+
+## Tmux + Claude Code sessions
+
+`tmux/.local/bin/claude-tmux-*` make tmux-resurrect (`prefix + C-s` / `prefix + C-r`) also resume the Claude Code session in each pane. The resurrect hooks are set in `tmux/.tmux.conf`. The SessionStart hook lives in `~/.claude/settings.json`, which is not tracked here, so add it by hand on a new machine:
+
+```json
+"hooks": {
+  "SessionStart": [{ "hooks": [{ "type": "command", "command": "claude-tmux-sessionstart" }] }]
+}
+```
+
+Sessions started before the hook was added are not recorded. Restart them once, and send a message, since a session is only resumable after its first message.
 
 ## Other
 

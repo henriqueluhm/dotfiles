@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# resurrect post-restore-all hook: resume claude in the panes that had it.
+f="$HOME/.local/share/tmux/resurrect/claude_sessions.txt"
+[ -f "$f" ] || f="$HOME/.tmux/resurrect/claude_sessions.txt"
+[ -f "$f" ] || exit 0
+sleep 1
+while IFS=$'\t' read -r pos id path; do
+  [ -n "$id" ] || continue
+  cmd=$(tmux display-message -p -t "$pos" '#{pane_current_command}' 2>/dev/null) || continue
+  case "$cmd" in zsh|bash|sh|fish) ;; *) continue ;; esac
+  tmux send-keys -t "$pos" "claude --resume $id" Enter
+done < "$f"

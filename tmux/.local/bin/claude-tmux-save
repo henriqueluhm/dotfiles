@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# resurrect post-save-layout hook: map claude panes to session ids.
+dir="${XDG_STATE_HOME:-$HOME/.local/state}/claude-tmux"
+out="$HOME/.local/share/tmux/resurrect/claude_sessions.txt"
+[ -d "$HOME/.local/share/tmux/resurrect" ] || out="$HOME/.tmux/resurrect/claude_sessions.txt"
+tmux list-panes -a -F '#{pane_id}	#{session_name}:#{window_index}.#{pane_index}	#{pane_current_command}	#{pane_current_path}' |
+while IFS=$'\t' read -r pid pos cmd path; do
+  [ "$cmd" = claude ] || continue
+  f="$dir/$pid"; [ -s "$f" ] || continue
+  printf '%s\t%s\t%s\n' "$pos" "$(cat "$f")" "$path"
+done > "$out.tmp" && mv "$out.tmp" "$out"

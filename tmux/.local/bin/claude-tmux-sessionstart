@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Claude SessionStart hook: remember which session runs in this tmux pane.
+[ -n "$TMUX_PANE" ] || exit 0
+dir="${XDG_STATE_HOME:-$HOME/.local/state}/claude-tmux"
+mkdir -p "$dir"
+payload=$(cat)
+printf '%s' "$payload" > "$dir/.last-payload"
+id=$(printf '%s' "$payload" | sed -n 's/.*"session_id" *: *"\([^"]*\)".*/\1/p' | head -n1)
+[ -n "$id" ] && printf '%s\n' "$id" > "$dir/$TMUX_PANE"
+exit 0
