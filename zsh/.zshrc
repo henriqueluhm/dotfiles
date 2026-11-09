@@ -15,6 +15,7 @@ alias dotf="cd ~/dotfiles && nv"
 alias keychron="echo 0 | sudo tee /sys/module/hid_apple/parameters/fnmode"
 alias zk="cd ~/Documents/zettelkasten && nv"
 alias coding="cd ~/Documents/coding"
+alias cr="claude --continue"
 
 function aliases() {
   grep -E '^\s*alias\s+' ~/.zshrc
