@@ -16,6 +16,7 @@ alias keychron="echo 0 | sudo tee /sys/module/hid_apple/parameters/fnmode"
 alias zk="cd ~/Documents/zettelkasten && nv"
 alias coding="cd ~/Documents/coding"
 alias cr="claude --continue"
+alias rr="cargo run"
 
 function aliases() {
   grep -E '^\s*alias\s+' ~/.zshrc
